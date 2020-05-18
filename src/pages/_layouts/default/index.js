@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {
@@ -18,12 +18,15 @@ import Grid from '@material-ui/core/Grid';
 import MenuIcon from '@material-ui/icons/Menu';
 import ItensNav from '~/components/Navigation';
 import { signOut } from '~/store/modules/auth/actions';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 
 import Search from '~/components/Search';
 
 import logo from '~/assets/logo.svg'
 
 const drawerWidth = 240;
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -135,7 +138,14 @@ const theme = createMuiTheme({
 
 export default function DefaultLayout({ children }) {
   const classes = useStyles();
+  const matches = useMediaQuery('(min-width:600px)');
+
   const [open, setOpen] = React.useState(true);
+
+
+  useEffect(() => {
+    setOpen(matches);
+  }, [matches]);
 
 
   const titulo = rota => {

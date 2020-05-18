@@ -7,12 +7,14 @@ import Parceiros from '~/pages/Parceiros';
 import Aovivo from '~/pages/Aovivo';
 
 
+
 export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/Parceiros" exact component={Parceiros}  />
       <Route path="/Aovivo" exact component={Aovivo} />
+
 
       <Route path="/" component={() => <h1>404</h1>} />
     </Switch>

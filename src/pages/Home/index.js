@@ -58,9 +58,9 @@ export default function Matriculas() {
                   <img className={classes.img} alt="complex" src={logoTorre} />
                 </ButtonBase>
               </Grid>
-              <Grid item xs={12} sm container>
-                <Grid item xs container direction="column" spacing={2}>
-                  <Grid item xs>
+              <Grid item xs={12} sm md container>
+                <Grid item xs container direction="column"  spacing={2}>
+                  <Grid item xs styles={{backgroundColor: '#000',}}>
                     <Typography gutterBottom variant="subtitle1">
                       Igeja Betel Torre
                     </Typography>
