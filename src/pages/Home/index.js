@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import ButtonBase from '@material-ui/core/ButtonBase';
 
 import logoTorre from '~/assets/logo-betel.jpg'; 
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 //import api from '~/services/api';
 
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Matriculas() {
   const classes = useStyles();
-
+  const matches = useMediaQuery('(min-width:600px)');
  
   return (
 
@@ -58,7 +59,7 @@ export default function Matriculas() {
                   <img className={classes.img} alt="complex" src={logoTorre} />
                 </ButtonBase>
               </Grid>
-              <Grid item xs={12} sm md container>
+              <Grid item xs sm md container>
                 <Grid item xs container direction="column"  spacing={2}>
                   <Grid item xs styles={{backgroundColor: '#000',}}>
                     <Typography gutterBottom variant="subtitle1">
@@ -96,7 +97,7 @@ export default function Matriculas() {
                   <img className={classes.img} alt="complex" src={logoTorre} />
                 </ButtonBase>
               </Grid>
-              <Grid item xs={12} sm container>
+              <Grid item xs sm md container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
                   <Typography gutterBottom variant="subtitle1">
@@ -130,7 +131,7 @@ export default function Matriculas() {
                   <img className={classes.img} alt="complex" src={logoTorre} />
                 </ButtonBase>
               </Grid>
-              <Grid item xs={12} sm container>
+              <Grid item xs sm md container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
                   <Typography gutterBottom variant="subtitle1">
