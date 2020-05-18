@@ -10,10 +10,21 @@ import SendIcon from '@material-ui/icons/Send';
 import HomeIcon from '@material-ui/icons/Home';
 import Divider from '@material-ui/core/Divider';
 import { NavLink } from 'react-router-dom';
+import Avatar from '@material-ui/core/Avatar';
+
+import logoTorre from '~/assets/logo-betel.jpg'; 
+import funcionarios from '~/assets/funcionarios.jpg'; 
+import padreZe from '~/assets/padre-ze.jpg'; 
 
 const useStyles = makeStyles(theme => ({
   menu: {
     color: '#707070',
+    maxWidth: '200px',
+    flexWrap: 'wrap',
+  },
+  small: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
   },
 }));
 
@@ -53,12 +64,28 @@ export default function Navigation() {
         <>
           <Divider />
           <ListSubheader inset>Lista de Canais</ListSubheader>
-          <NavLink to="/conta">
+          <NavLink to="/">
             <ListItem button>
               <ListItemIcon>
-                <AccountBoxOutlinedIcon />
+              <Avatar alt="Igreja Betel Torre" src={logoTorre} className={classes.small} />
               </ListItemIcon>
               <ListItemText className={classes.menu} primary="Igreja Betel Torre" />
+            </ListItem>
+          </NavLink>
+          <NavLink to="/">
+            <ListItem button>
+              <ListItemIcon>
+              <Avatar alt="Igreja Betel Torre" src={padreZe} className={classes.small} />
+              </ListItemIcon>
+              <ListItemText className={classes.menu} primary="Igreja Betel Padre Zé" />
+            </ListItem>
+          </NavLink>
+          <NavLink to="/">
+            <ListItem button>
+              <ListItemIcon>
+              <Avatar alt="Igreja Betel Torre" src={funcionarios} className={classes.small} />
+              </ListItemIcon>
+              <ListItemText className={classes.menu} primary="Igreja Betel Funcionaios II" />
             </ListItem>
           </NavLink>
         </>

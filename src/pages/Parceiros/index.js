@@ -46,7 +46,7 @@ export default function Mensalidades({ match }) {
           
         </Grid>
         <Button href="https://docs.google.com/forms/d/e/1FAIpQLSd60j_zQsbKzeVDWjr6btk92pvKTiY75OMYjHLiV8j1wppikQ/viewform?usp=sf_link" variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
-                    VER CANAL
+                    Quero ser Parceiro!
                   </Button>
         
       </Paper>
