@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "./static/js/main.e6254b0f.chunk.js",
-    "main.js.map": "./static/js/main.e6254b0f.chunk.js.map",
+    "main.js": "./static/js/main.a21a6265.chunk.js",
+    "main.js.map": "./static/js/main.a21a6265.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.3ee3155b.js",
     "runtime-main.js.map": "./static/js/runtime-main.3ee3155b.js.map",
     "static/css/2.f42e59c9.chunk.css": "./static/css/2.f42e59c9.chunk.css",
-    "static/js/2.c4a93a10.chunk.js": "./static/js/2.c4a93a10.chunk.js",
-    "static/js/2.c4a93a10.chunk.js.map": "./static/js/2.c4a93a10.chunk.js.map",
+    "static/js/2.1088a1e4.chunk.js": "./static/js/2.1088a1e4.chunk.js",
+    "static/js/2.1088a1e4.chunk.js.map": "./static/js/2.1088a1e4.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.1e38fde2062536d09b2e5f25c60db35a.js": "./precache-manifest.1e38fde2062536d09b2e5f25c60db35a.js",
+    "precache-manifest.5a0e14f5a5f004549ad740fa658a2add.js": "./precache-manifest.5a0e14f5a5f004549ad740fa658a2add.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.f42e59c9.chunk.css.map": "./static/css/2.f42e59c9.chunk.css.map",
     "static/media/logo-betel.jpg": "./static/media/logo-betel.86751fc9.jpg",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.3ee3155b.js",
     "static/css/2.f42e59c9.chunk.css",
-    "static/js/2.c4a93a10.chunk.js",
-    "static/js/main.e6254b0f.chunk.js"
+    "static/js/2.1088a1e4.chunk.js",
+    "static/js/main.a21a6265.chunk.js"
   ]
 }

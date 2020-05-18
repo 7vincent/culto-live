@@ -11,15 +11,11 @@ import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
-import { useDispatch, useSelector } from 'react-redux';
 import ItensNav from '~/components/Navigation';
 import { signOut } from '~/store/modules/auth/actions';
 
@@ -140,9 +136,7 @@ const theme = createMuiTheme({
 export default function DefaultLayout({ children }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
-  const dispatch = useDispatch();
-  const profile = useSelector(state => state.user.profile);
-  const pathname = window.location.pathname.split('/')[1];
+
 
   const titulo = rota => {
     if (rota.includes('matriculas')) {
@@ -202,9 +196,9 @@ export default function DefaultLayout({ children }) {
     setOpen(false);
   };
 
-  function handleSignOut(data) {
-    dispatch(signOut(data));
-  }
+  // function handleSignOut(data) {
+  //   dispatch(signOut(data));
+  // }
 
   return (
     <ThemeProvider theme={theme}>

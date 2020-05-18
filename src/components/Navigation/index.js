@@ -1,11 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { useSelector } from 'react-redux';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import DashboardIcon from '@material-ui/icons/Dashboard';
 import AccountBoxOutlinedIcon from '@material-ui/icons/AccountBoxOutlined';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import SendIcon from '@material-ui/icons/Send';
