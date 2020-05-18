@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     display:'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-sround',
   },
   toolbarIcon: {
     display: 'flex',

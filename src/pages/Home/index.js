@@ -7,6 +7,9 @@ import Grid from '@material-ui/core/Grid';
 import ButtonBase from '@material-ui/core/ButtonBase';
 
 import logoTorre from '~/assets/logo-betel.jpg'; 
+import funcionarios from '~/assets/funcionarios.jpg'; 
+import padreZe from '~/assets/padre-ze.jpg'; 
+
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 //import api from '~/services/api';
@@ -76,7 +79,7 @@ export default function Matriculas() {
                     </Typography>
                   </Grid>
                   <Grid item>
-                  <Button variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
+                  <Button href="https://www.youtube.com/channel/UCjNjfQPfUSZRz1gTBHYwbKw" variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
                     VER CANAL
                   </Button>
                   </Grid>
@@ -94,14 +97,14 @@ export default function Matriculas() {
             <Grid container spacing={2}>
               <Grid item>
                 <ButtonBase className={classes.image}>
-                  <img className={classes.img} alt="complex" src={logoTorre} />
+                  <img className={classes.img} alt="complex" src={funcionarios} />
                 </ButtonBase>
               </Grid>
               <Grid item xs sm md container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
                   <Typography gutterBottom variant="subtitle1">
-                      Igeja Betel Torre
+                      Igeja Betel Funcionarios II
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
                       João Pessoa - PB
@@ -114,7 +117,7 @@ export default function Matriculas() {
                     </Typography>
                   </Grid>
                   <Grid item>
-                  <Button variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
+                  <Button href="https://www.youtube.com/channel/UCAv1YwbPKX88XfmYlWUP69A" variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
                     VER CANAL
                   </Button>
                   </Grid>
@@ -128,14 +131,14 @@ export default function Matriculas() {
             <Grid container spacing={2}>
               <Grid item>
                 <ButtonBase className={classes.image}>
-                  <img className={classes.img} alt="complex" src={logoTorre} />
+                  <img className={classes.img} alt="complex" src={padreZe} />
                 </ButtonBase>
               </Grid>
               <Grid item xs sm md container>
                 <Grid item xs container direction="column" spacing={2}>
                   <Grid item xs>
                   <Typography gutterBottom variant="subtitle1">
-                      Igeja Betel Torre
+                      Igeja Betel Padre Zé
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
                       João Pessoa - PB
@@ -143,14 +146,11 @@ export default function Matriculas() {
                     <Typography variant="body2" gutterBottom>
                       Domingos: 18h
                     </Typography>
-                    <Typography variant="body2" gutterBottom>
-                      Quartas: 20h
-                    </Typography>
                   </Grid>
                   <Grid item>
-                  <Button variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
-                    VER CANAL
-                  </Button>
+                      <Button href="https://www.youtube.com/channel/UCbwL5Nwn67FGiLeM71ncGaQ" variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
+                        VER CANAL
+                      </Button>
                   </Grid>
                 </Grid>
               </Grid>        
