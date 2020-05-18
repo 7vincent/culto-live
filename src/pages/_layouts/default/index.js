@@ -233,9 +233,9 @@ export default function DefaultLayout({ children }) {
               <MenuIcon />
               <img src={logo} alt="Culto Online" />
             </IconButton>
-            <div className={classes.search}>
+            {/* <div className={classes.search}>
               <Search />
-            </div>
+            </div> */}
           </Toolbar>
         </AppBar>
 
