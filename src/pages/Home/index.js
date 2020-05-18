@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -42,122 +42,88 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const data = [
+  {
+    img: logoTorre,
+    title: "Igreja Betel Torre",
+    city: "João Pessoa - PB",
+    cultos: [{day: 'Domingo', hour:'18h'}, {day: 'Quartas', hour:'20h'}],
+    idChannel: "UCjNjfQPfUSZRz1gTBHYwbKw",
+    description: "Maneja bem a palavra da verdade!",
+  },
+  {
+    img: padreZe,
+    title: "Igreja Betel Padre Zé",
+    city: "João Pessoa - PB",
+    cultos: [{day: 'Domingo', hour:'18h'}],
+    idChannel: "UCbwL5Nwn67FGiLeM71ncGaQ",
+    description: "Maneja bem a palavra da verdade!",
+  },
+  {
+    img: funcionarios,
+    title: "Igreja Betel Funcionarios II",
+    city: "João Pessoa - PB",
+    cultos: [{day: 'Domingo', hour:'18h'}],
+    idChannel: "UCAv1YwbPKX88XfmYlWUP69A",
+    description: "Maneja bem a palavra da verdade!",
+  },
+
+];
 
 export default function Matriculas() {
   const classes = useStyles();
   const matches = useMediaQuery('(min-width:600px)');
- 
+
+  const [channels, setChannels] = useState(data);
+
   return (
 
     <div className={classes.root}>
 
       <Grid container spacing={3}>
 
+      {channels.map(channel =>
+
         <Grid item className={classes.container} xs={12} sm={6} md={4} spacing={2}>
 
           <Paper className={classes.paper}>
             <Grid container spacing={2}>
               <Grid item>
                 <ButtonBase className={classes.image}>
-                  <img className={classes.img} alt="complex" src={logoTorre} />
+                  <img className={classes.img} alt="complex" src={channel.img} />
                 </ButtonBase>
               </Grid>
               <Grid item xs sm md container>
                 <Grid item xs container direction="column"  spacing={2}>
                   <Grid item xs styles={{backgroundColor: '#000',}}>
                     <Typography gutterBottom variant="subtitle1">
-                      Igeja Betel Torre
+                      {channel.title}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
-                      João Pessoa - PB
+                    {channel.city}
                     </Typography>
+                    
+                    {channel.cultos.map(culto => 
                     <Typography variant="body2" gutterBottom>
-                      Domingos: 18h
+                      {culto.day} - {culto.hour} 
                     </Typography>
-                    <Typography variant="body2" gutterBottom>
-                      Quartas: 20h
-                    </Typography>
+                    )}
                   </Grid>
                   <Grid item>
-                  <Button href="https://www.youtube.com/channel/UCjNjfQPfUSZRz1gTBHYwbKw" variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
+                  <Button href={`https://www.youtube.com/channel/${channel.idChannel}`} variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
                     VER CANAL
                   </Button>
                   </Grid>
                 </Grid>
               
+              </Grid>    
               </Grid>
-
-              
-            </Grid>
-          </Paper>
-      </Grid>
-
-      <Grid item className={classes.container} xs={12} sm={6} md={4} spacing={2}>
-          <Paper className={classes.paper}>
-            <Grid container spacing={2}>
-              <Grid item>
-                <ButtonBase className={classes.image}>
-                  <img className={classes.img} alt="complex" src={funcionarios} />
-                </ButtonBase>
-              </Grid>
-              <Grid item xs sm md container>
-                <Grid item xs container direction="column" spacing={2}>
-                  <Grid item xs>
-                  <Typography gutterBottom variant="subtitle1">
-                      Igeja Betel Funcionarios II
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      João Pessoa - PB
-                    </Typography>
-                    <Typography variant="body2" gutterBottom>
-                      Domingos: 18h
-                    </Typography>
-                    <Typography variant="body2" gutterBottom>
-                      Quartas: 20h
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                  <Button href="https://www.youtube.com/channel/UCAv1YwbPKX88XfmYlWUP69A" variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
-                    VER CANAL
-                  </Button>
-                  </Grid>
-                </Grid>
-              </Grid>        
-            </Grid>
-          </Paper>
+            </Paper>
         </Grid>
-        <Grid item className={classes.container} xs={12} sm={6} md={4} spacing={2}>
-          <Paper className={classes.paper}>
-            <Grid container spacing={2}>
-              <Grid item>
-                <ButtonBase className={classes.image}>
-                  <img className={classes.img} alt="complex" src={padreZe} />
-                </ButtonBase>
-              </Grid>
-              <Grid item xs sm md container>
-                <Grid item xs container direction="column" spacing={2}>
-                  <Grid item xs>
-                  <Typography gutterBottom variant="subtitle1">
-                      Igeja Betel Padre Zé
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      João Pessoa - PB
-                    </Typography>
-                    <Typography variant="body2" gutterBottom>
-                      Domingos: 18h
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                      <Button href="https://www.youtube.com/channel/UCbwL5Nwn67FGiLeM71ncGaQ" variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
-                        VER CANAL
-                      </Button>
-                  </Grid>
-                </Grid>
-              </Grid>        
-            </Grid>
-          </Paper>
-          </Grid>
-          </Grid>
+
+      )}
+      
+      </Grid>
   </div>
   );
 }

@@ -12,7 +12,7 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/Parceiros" exact component={Parceiros}  />
+      <Route path="/inscricao-parceiro" exact component={Parceiros}  />
       <Route path="/Aovivo" exact component={Aovivo} />
 
 

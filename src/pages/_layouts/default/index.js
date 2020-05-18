@@ -148,55 +148,55 @@ export default function DefaultLayout({ children }) {
   }, [matches]);
 
 
-  const titulo = rota => {
-    if (rota.includes('matriculas')) {
-      return 'Matrículas';
-    }
+  // const titulo = rota => {
+  //   if (rota.includes('matriculas')) {
+  //     return 'Matrículas';
+  //   }
 
-    if (rota.includes('series')) {
-      return 'Séries';
-    }
+  //   if (rota.includes('series')) {
+  //     return 'Séries';
+  //   }
 
-    if (rota.includes('-matricula')) {
-      const newRota = rota.replace(/-matricula/, ' Matrícula');
-      return newRota;
-    }
+  //   if (rota.includes('-matricula')) {
+  //     const newRota = rota.replace(/-matricula/, ' Matrícula');
+  //     return newRota;
+  //   }
 
-    if (rota.includes('-serie')) {
-      const newRota = rota.replace(/-serie/, ' Série');
-      return newRota;
-    }
+  //   if (rota.includes('-serie')) {
+  //     const newRota = rota.replace(/-serie/, ' Série');
+  //     return newRota;
+  //   }
 
-    if (rota.includes('-usuario')) {
-      const newRota = rota.replace(/-usuario/, ' Usuário');
-      return newRota;
-    }
+  //   if (rota.includes('-usuario')) {
+  //     const newRota = rota.replace(/-usuario/, ' Usuário');
+  //     return newRota;
+  //   }
 
-    if (rota.includes('-despesa')) {
-      const newRota = rota.replace(/-despesa/, ' Despesa');
-      return newRota;
-    }
+  //   if (rota.includes('-despesa')) {
+  //     const newRota = rota.replace(/-despesa/, ' Despesa');
+  //     return newRota;
+  //   }
 
-    if (rota.includes('matricula')) {
-      const newRota = rota.replace(/matricula/, 'Editar Matrícula');
-      return newRota;
-    }
+  //   if (rota.includes('matricula')) {
+  //     const newRota = rota.replace(/matricula/, 'Editar Matrícula');
+  //     return newRota;
+  //   }
 
-    if (rota.includes('serie')) {
-      const newRota = rota.replace(/serie/, 'Editar Série');
-      return newRota;
-    }
+  //   if (rota.includes('serie')) {
+  //     const newRota = rota.replace(/serie/, 'Editar Série');
+  //     return newRota;
+  //   }
 
-    if (rota === 'usuarios') {
-      return 'Usuários';
-    }
+  //   if (rota === 'usuarios') {
+  //     return 'Usuários';
+  //   }
 
-    if (rota === 'usuario') {
-      return 'Usuário';
-    }
+  //   if (rota === 'usuario') {
+  //     return 'Usuário';
+  //   }
 
-    return rota;
-  };
+  //   return rota;
+  // };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -231,6 +231,7 @@ export default function DefaultLayout({ children }) {
               )}
             >
               <MenuIcon />
+              <img src={logo} alt="Culto Online" />
             </IconButton>
             <div className={classes.search}>
               <Search />
@@ -254,9 +255,7 @@ export default function DefaultLayout({ children }) {
 
           </div>
 
-
           <Divider />
-          
           <List>
             <ItensNav />
           </List>
