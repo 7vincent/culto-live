@@ -1,0 +1,19 @@
+[16:06, 26/12/2019] +55 83 9609-9419: quando eu logo no sistema e clico na funcionalidade de series
+[16:06, 26/12/2019] +55 83 9609-9419: ele carrega as series direitinho
+[16:07, 26/12/2019] +55 83 9609-9419: mas se eu deslogar e logar novamente, e acessar a funcionalidade de series novamente
+[16:07, 26/12/2019] +55 83 9609-9419: ele nao ta exibindo as series
+[16:07, 26/12/2019] +55 83 9609-9419: o bug é esse
+
+Erro de senha exposta na view:
+Resolvido, inseri o atributo password
+
+Erro não fazer update da senha:
+resolvido: o sagas.js da Conta não estava enviando para a api o password e o confirmPassword.
+
+Erro no carregamento das series, ao clicar no men:
+resolvido
+
+Não estava criada a rota serie/id no back, para trazer para a view os dados para edição  
+Resolvido, rota criada e index do form update refeito para buscar dessa rota
+
+
