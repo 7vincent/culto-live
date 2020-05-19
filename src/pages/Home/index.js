@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
     margin: 'auto',
     //width: '90%',
     marginBottom: 20,
+    minHeight: '200px',
   },
   image: {
     width: 128,
@@ -40,6 +41,20 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '100%',
     borderRadius: 100,
   },
+  vercanal:{
+    backgroundColor:"#E64E1C",
+     color:"#fff", 
+     fontWeight:'bold', 
+     display: 'flex'
+
+  },
+  dadoscanal:{
+    minHeight: '180px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'bottom',
+    justifyContent: 'space-between'
+  }
 }));
 
 const data = [
@@ -66,7 +81,7 @@ const data = [
     cultos: [{day: 'Domingo', hour:'18h'}],
     idChannel: "UCAv1YwbPKX88XfmYlWUP69A",
     description: "Maneja bem a palavra da verdade!",
-  },
+  }
 
 ];
 
@@ -94,7 +109,7 @@ export default function Matriculas() {
                 </ButtonBase>
               </Grid>
               <Grid item xs sm md container>
-                <Grid item xs container direction="column"  spacing={2}>
+                <Grid item xs container className={classes.dadoscanal} spacing={2}>
                   <Grid item xs styles={{backgroundColor: '#000',}}>
                     <Typography gutterBottom variant="subtitle1">
                       {channel.title}
@@ -110,7 +125,7 @@ export default function Matriculas() {
                     )}
                   </Grid>
                   <Grid item>
-                  <Button href={`https://www.youtube.com/channel/${channel.idChannel}`} variant="contained" style={{backgroundColor:"#E64E1C", color:"#fff", fontWeight:'bold',}}>
+                  <Button href={`https://www.youtube.com/channel/${channel.idChannel}`} variant="contained" className={classes.vercanal}>
                     VER CANAL
                   </Button>
                   </Grid>
